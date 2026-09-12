@@ -393,7 +393,7 @@ window.AppPAUD = (function () {
                 <div>
                     <div class="relative overflow-hidden aspect-video bg-slate-950">
                         <img src="${v.thumbnail || `https://img.youtube.com/vi/${v.videoId}/mqdefault.jpg`}" alt="${v.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <button onclick="app.playVideo('${v.videoId}')" class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button onclick="AppPAUD.app.playVideo('${v.videoId}')" class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                             <div class="w-12 h-12 rounded-full bg-pink-600 text-white flex items-center justify-center text-lg shadow-lg">
                                 <i class="fa-solid fa-play ml-0.5"></i>
                             </div>
@@ -407,7 +407,7 @@ window.AppPAUD = (function () {
                 </div>
                 <div class="px-4 pb-4 pt-2 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
                     <span class="font-medium">${v.channel}</span>
-                    <button onclick="app.playVideo('${v.videoId}')" class="text-pink-600 dark:text-pink-400 font-bold hover:underline flex items-center gap-1">
+                    <button onclick="AppPAUD.app.playVideo('${v.videoId}')" class="text-pink-600 dark:text-pink-400 font-bold hover:underline flex items-center gap-1">
                         Tonton <i class="fa-solid fa-arrow-right text-[10px]"></i>
                     </button>
                 </div>
@@ -438,7 +438,7 @@ window.AppPAUD = (function () {
                     <h2 class="text-3xl font-heading font-bold mb-2 relative z-10">Apa yang ingin Anda pelajari hari ini?</h2>
                     <p class="mb-6 opacity-90 relative z-10 text-sm md:text-base">Ketik kendala atau panduan yang Anda cari (Misal: "Dual Whiteboard", "Multi-touch", atau "Screen Sharing")</p>
                     
-                    <form onsubmit="app.handleSearch(event)" class="relative max-w-2xl mx-auto z-10">
+                    <form onsubmit="AppPAUD.app.handleSearch(event)" class="relative max-w-2xl mx-auto z-10">
                         <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400"></i>
                         <input type="text" id="searchInput" placeholder="Bagaimana cara..." 
                             class="w-full pl-12 pr-28 py-4 rounded-2xl text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-900 focus:outline-none focus:ring-4 focus:ring-pink-400/30 shadow-lg text-base border border-transparent dark:border-slate-800">
@@ -451,7 +451,7 @@ window.AppPAUD = (function () {
                     <h3 class="font-heading font-bold text-xl mb-4 text-slate-900 dark:text-slate-100">Akses Cepat Kategori</h3>
                     <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
                         ${MASTER_TOPICS.map(t => `
-                            <button onclick="app.quickSearch('${t.name}')" class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-pink-500/50 transition-all flex flex-col items-center text-center gap-2 group">
+                            <button onclick="AppPAUD.app.quickSearch('${t.name}')" class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-pink-500/50 transition-all flex flex-col items-center text-center gap-2 group">
                                 <div class="${t.color} bg-slate-100 dark:bg-slate-800/80 w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <i class="fa-solid ${t.icon} text-xl"></i>
                                 </div>
@@ -481,19 +481,19 @@ window.AppPAUD = (function () {
 
                     <!-- Level Filter Tabs -->
                     <div class="flex flex-wrap gap-2 mb-6 border-b border-slate-200 dark:border-slate-800 pb-3" id="level-tabs">
-                        <button onclick="app.switchLevelTab('all')" class="level-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-pink-600 text-white shadow-sm" data-tab="all">
+                        <button onclick="AppPAUD.app.switchLevelTab('all')" class="level-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-pink-600 text-white shadow-sm" data-tab="all">
                             Semua Level (22 Panduan)
                         </button>
-                        <button onclick="app.switchLevelTab('level1')" class="level-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700" data-tab="level1">
+                        <button onclick="AppPAUD.app.switchLevelTab('level1')" class="level-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700" data-tab="level1">
                             Level 1: Substitution
                         </button>
-                        <button onclick="app.switchLevelTab('level2')" class="level-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700" data-tab="level2">
+                        <button onclick="AppPAUD.app.switchLevelTab('level2')" class="level-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700" data-tab="level2">
                             Level 2: Augmentation
                         </button>
-                        <button onclick="app.switchLevelTab('level3')" class="level-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700" data-tab="level3">
+                        <button onclick="AppPAUD.app.switchLevelTab('level3')" class="level-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700" data-tab="level3">
                             Level 3: Modification
                         </button>
-                        <button onclick="app.switchLevelTab('level4')" class="level-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700" data-tab="level4">
+                        <button onclick="AppPAUD.app.switchLevelTab('level4')" class="level-tab-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700" data-tab="level4">
                             Level 4: Redefinition
                         </button>
                     </div>
@@ -529,7 +529,7 @@ window.AppPAUD = (function () {
                                             </div>
 
                                             <div class="flex items-center gap-2 shrink-0 self-end md:self-center">
-                                                <button onclick="app.playVideo('${item.videoId}')" class="bg-pink-50 hover:bg-pink-100 dark:bg-pink-950/50 dark:hover:bg-pink-900/50 text-pink-600 dark:text-pink-400 px-3.5 py-2 rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5 border border-pink-200 dark:border-pink-800">
+                                                <button onclick="AppPAUD.app.playVideo('${item.videoId}')" class="bg-pink-50 hover:bg-pink-100 dark:bg-pink-950/50 dark:hover:bg-pink-900/50 text-pink-600 dark:text-pink-400 px-3.5 py-2 rounded-xl text-xs font-bold transition-colors flex items-center gap-1.5 border border-pink-200 dark:border-pink-800">
                                                     <i class="fa-solid fa-play"></i> Buka Panduan
                                                 </button>
                                                 <a href="${item.ytUrl}" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm hover:scale-105">
@@ -554,11 +554,11 @@ window.AppPAUD = (function () {
 
             html += `
             <div class="flex items-center gap-4 mb-6">
-                <button onclick="app.navigate('home')" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                <button onclick="AppPAUD.app.navigate('home')" class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
                     <i class="fa-solid fa-arrow-left"></i>
                 </button>
                 <div class="flex-1 relative">
-                    <form onsubmit="app.handleSearch(event)">
+                    <form onsubmit="AppPAUD.app.handleSearch(event)">
                         <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400"></i>
                         <input type="text" id="searchInput" value="${query}" class="w-full pl-12 pr-4 py-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-pink-500 shadow-sm text-sm">
                     </form>
@@ -600,7 +600,7 @@ window.AppPAUD = (function () {
                 </h3>
                 <div class="space-y-3 mb-8">
                     ${results.timestamps.map(res => `
-                        <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-sm border-l-4 border-pink-600 border border-slate-200 dark:border-slate-800 hover:shadow-md transition-all cursor-pointer flex justify-between items-center group" onclick="app.playVideo('${res.video.videoId}', ${res.timestamp.seconds})">
+                        <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-sm border-l-4 border-pink-600 border border-slate-200 dark:border-slate-800 hover:shadow-md transition-all cursor-pointer flex justify-between items-center group" onclick="AppPAUD.app.playVideo('${res.video.videoId}', ${res.timestamp.seconds})">
                             <div>
                                 <div class="flex items-center gap-2 mb-1">
                                     <span class="bg-pink-50 dark:bg-pink-950/60 text-pink-600 dark:text-pink-400 font-mono font-bold text-xs px-2.5 py-0.5 rounded-md border border-pink-200 dark:border-pink-800">
@@ -640,14 +640,14 @@ window.AppPAUD = (function () {
         renderPlayer: (video, startSeconds = 0) => {
             if (!UI.container) return;
             const embedUrl = `https://www.youtube-nocookie.com/embed/${video.videoId}?autoplay=1&start=${startSeconds}&rel=0&enablejsapi=1`;
-            const timeBadgeText = startSeconds ? app.formatTime(startSeconds) : "00:00";
+            const timeBadgeText = startSeconds ? AppPAUD.app.formatTime(startSeconds) : "00:00";
 
             let html = `
             <div class="fade-in max-w-6xl mx-auto h-full flex flex-col lg:flex-row gap-6">
                 <!-- Left: Embedded Video Player -->
                 <div class="lg:w-2/3 flex flex-col">
                     <div class="flex items-center justify-between mb-4">
-                        <button onclick="app.navigate('home')" class="text-slate-600 dark:text-slate-300 hover:text-pink-600 font-semibold flex items-center gap-2 bg-white dark:bg-slate-900 px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow transition-all text-xs">
+                        <button onclick="AppPAUD.app.navigate('home')" class="text-slate-600 dark:text-slate-300 hover:text-pink-600 font-semibold flex items-center gap-2 bg-white dark:bg-slate-900 px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow transition-all text-xs">
                             <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
                         </button>
                         <span id="active-time-badge" class="bg-pink-50 dark:bg-pink-950/50 text-pink-600 dark:text-pink-400 text-xs px-3 py-1.5 rounded-xl font-mono font-bold border border-pink-200 dark:border-pink-800">
@@ -680,7 +680,7 @@ window.AppPAUD = (function () {
                             </div>
 
                             <div class="flex flex-wrap items-center gap-2">
-                                <button class="bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center gap-1.5" onclick="app.toggleFavorite('${video.videoId}')">
+                                <button class="bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 px-4 py-2 rounded-xl text-xs font-semibold transition-colors flex items-center gap-1.5" onclick="AppPAUD.app.toggleFavorite('${video.videoId}')">
                                     <i class="fa-bookmark ${window.state.favorites.includes(video.videoId) ? 'fa-solid text-yellow-500' : 'fa-regular'}"></i> Favorit
                                 </button>
                                 <a id="direct-yt-btn" href="https://www.youtube.com/watch?v=${video.videoId}${startSeconds ? `&t=${startSeconds}s` : ''}" target="_blank" rel="noopener noreferrer" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 shadow-sm transition-all hover:scale-105">
@@ -708,14 +708,14 @@ window.AppPAUD = (function () {
                             <div class="relative">
                                 <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 transform -translate-y-1/2 text-slate-400 text-sm"></i>
                                 <input type="text" id="videoSearchInput" placeholder="Cari bab di panduan ini..." 
-                                    onkeyup="app.filterTimestamps(this.value)"
+                                    onkeyup="AppPAUD.app.filterTimestamps(this.value)"
                                     class="w-full pl-10 pr-3 py-2.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-pink-500">
                             </div>
                         </div>
                         <div class="flex-1 overflow-y-auto p-3 custom-scrollbar space-y-2" id="timestamp-list">
                             ${video.timestamps.map(ts => `
                                 <div class="ts-item p-3.5 hover:bg-pink-50/80 dark:hover:bg-slate-800/80 rounded-2xl cursor-pointer transition-all border border-slate-100 dark:border-slate-800/60 group" 
-                                     onclick="app.seekTo(${ts.seconds})" data-keywords="${ts.title.toLowerCase()} ${ts.keywords ? ts.keywords.join(' ') : ''}">
+                                     onclick="AppPAUD.app.seekTo(${ts.seconds})" data-keywords="${ts.title.toLowerCase()} ${ts.keywords ? ts.keywords.join(' ') : ''}">
                                     <div class="flex items-start gap-3">
                                         <span class="bg-pink-50 dark:bg-pink-950/60 text-pink-600 dark:text-pink-400 font-mono text-xs px-2.5 py-1 rounded-lg border border-pink-200 dark:border-pink-800 font-bold shrink-0">
                                             ${ts.time}
@@ -822,7 +822,7 @@ window.AppPAUD = (function () {
 
             const badge = document.getElementById('active-time-badge');
             if (badge) {
-                badge.innerHTML = `<i class="fa-regular fa-clock mr-1"></i> Posisi: ${app.formatTime(seconds)}`;
+                badge.innerHTML = `<i class="fa-regular fa-clock mr-1"></i> Posisi: ${AppPAUD.app.formatTime(seconds)}`;
             }
 
             const ytBtn = document.getElementById('direct-yt-btn');
