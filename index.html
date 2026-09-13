@@ -83,8 +83,8 @@
             <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 font-medium text-sm">
                 <button onclick="switchTab('home')" id="tab-btn-home"
                     class="nav-tab-btn px-4 py-2 rounded-xl text-pink-600 dark:text-pink-400 font-bold bg-pink-50 dark:bg-pink-950/40 transition-all">Beranda</button>
-                <button onclick="switchTab('about')" id="tab-btn-about"
-                    class="nav-tab-btn px-4 py-2 rounded-xl hover:text-pink-600 dark:hover:text-pink-400 text-slate-600 dark:text-slate-300 transition-all">Tentang</button>
+                <button onclick="switchTab('services')" id="tab-btn-services"
+                    class="nav-tab-btn px-4 py-2 rounded-xl hover:text-pink-600 dark:hover:text-pink-400 text-slate-600 dark:text-slate-300 transition-all">Layanan</button>
                 <button onclick="switchTab('panduan1')" id="tab-btn-panduan1"
                     class="nav-tab-btn px-4 py-2 rounded-xl hover:text-pink-600 dark:hover:text-pink-400 text-slate-600 dark:text-slate-300 transition-all">PAUD
                     SD SMP SLB PKBM</button>
@@ -122,8 +122,8 @@
             class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg px-4 pt-3 pb-6 space-y-2">
             <button onclick="switchTab('home')"
                 class="mobile-tab-btn block w-full text-left px-4 py-2.5 rounded-xl text-base font-medium hover:bg-pink-50 dark:hover:bg-slate-800">Beranda</button>
-            <button onclick="switchTab('about')"
-                class="mobile-tab-btn block w-full text-left px-4 py-2.5 rounded-xl text-base font-medium hover:bg-pink-50 dark:hover:bg-slate-800">Tentang</button>
+            <button onclick="switchTab('services')"
+                class="mobile-tab-btn block w-full text-left px-4 py-2.5 rounded-xl text-base font-medium hover:bg-pink-50 dark:hover:bg-slate-800">Layanan</button>
             <button onclick="switchTab('panduan1')"
                 class="mobile-tab-btn block w-full text-left px-4 py-2.5 rounded-xl text-base font-medium hover:bg-pink-50 dark:hover:bg-slate-800">PAUD
                 SD SMP SLB PKBM</button>
@@ -173,11 +173,10 @@
                         </p>
 
                         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-                            <button onclick="switchTab('about')"
+                            <button onclick="switchTab('services')"
                                 class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-pink-600 to-violet-600 hover:opacity-90 text-white font-semibold text-base shadow-lg shadow-pink-500/25 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2">
                                 <span>
-                                    <i class="fa-solid fa-user text-sm me-2"></i> Lihat
-                                    Portofolio</span>
+                                    <i class="fa-solid fa-user text-sm me-2"></i> Lihat Layanan</span>
                                 <i class="fa-solid fa-arrow-right text-sm"></i>
                             </button>
                         </div>
@@ -250,201 +249,102 @@
         </section>
 
         <!-- TAB 2: TENTANG -->
-        <section id="tab-about" class="tab-content py-12 md:py-16">
+
+
+        <section id="tab-services" class="tab-content py-12 md:py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-xs font-bold text-pink-600 dark:text-pink-400 tracking-widest uppercase mb-2">
-                        Mengenal Saya</h2>
-                    <h3 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 dark:text-white">Profil, Visi
-                        & Keahlian Utama</h3>
+                    <!-- <h2 class="text-xs font-bold text-pink-600 dark:text-pink-400 tracking-widest uppercase mb-2">
+                        Layanan Profesional</h2> -->
+                    <h3 class="text-3xl sm:text-4xl font-heading font-bold text-slate-900 dark:text-white">Pusat
+                        Informasi & Unduhan</h3>
                     <div class="w-20 h-1.5 bg-pink-600 mx-auto rounded-full mt-4"></div>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
-                    <div class="lg:col-span-6 space-y-6">
-                        <h4 class="text-2xl font-heading font-bold text-slate-900 dark:text-white">
-                            Kiki Wulan Sarie — Memadukan Estetika Visual dengan Analisis Strategi Konten
-                        </h4>
-                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-                            Saya percaya bahwa desain hebat bukan sekadar tampilan yang indah, melainkan tentang
-                            menyampaikan narasi brand secara jelas dan menciptakan keterikatan emosional dengan audiens.
-                        </p>
-                        <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-                            Dengan pengalaman lebih dari 5 tahun di industri kreatif digital, saya telah mendesain
-                            identitas merek, kampanye media sosial, dan antarmuka produk digital untuk puluhan klien dan
-                            startup lokal maupun internasional.
-                        </p>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                            <div class="glass-card p-4 rounded-2xl">
-                                <div class="text-pink-600 dark:text-pink-400 text-xl mb-2">
-                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-                                </div>
-                                <h5 class="font-bold text-slate-900 dark:text-white mb-1">Desain Berorientasi Hasil</h5>
-                                <p class="text-xs text-slate-500 dark:text-slate-400">Fokus pada visual menarik yang
-                                    mendorong konversi dan awareness.</p>
-                            </div>
-                            <div class="glass-card p-4 rounded-2xl">
-                                <div class="text-pink-600 dark:text-pink-400 text-xl mb-2">
-                                    <i class="fa-solid fa-bullseye"></i>
-                                </div>
-                                <h5 class="font-bold text-slate-900 dark:text-white mb-1">Strategi Konten Tepat</h5>
-                                <p class="text-xs text-slate-500 dark:text-slate-400">Merancang narasi unik yang
-                                    disesuaikan dengan target audiens.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Skills Progress -->
-                    <div
-                        class="lg:col-span-6 glass-card p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg">
-                        <h4 class="text-xl font-heading font-bold text-slate-900 dark:text-white mb-6">Tingkat Keahlian
-                            Spesialis</h4>
-
-                        <div class="space-y-5">
-                            <div>
-                                <div class="flex justify-between font-semibold text-sm mb-2">
-                                    <span class="text-slate-700 dark:text-slate-200">Graphic & Brand Identity
-                                        Design</span>
-                                    <span class="text-pink-600 dark:text-pink-400">95%</span>
-                                </div>
-                                <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2.5">
-                                    <div class="bg-gradient-to-r from-pink-600 to-violet-600 h-2.5 rounded-full"
-                                        style="width: 95%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between font-semibold text-sm mb-2">
-                                    <span class="text-slate-700 dark:text-slate-200">Content Strategy & Social Media
-                                        Planning</span>
-                                    <span class="text-pink-600 dark:text-pink-400">90%</span>
-                                </div>
-                                <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2.5">
-                                    <div class="bg-gradient-to-r from-pink-600 to-violet-600 h-2.5 rounded-full"
-                                        style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between font-semibold text-sm mb-2">
-                                    <span class="text-slate-700 dark:text-slate-200">UI/UX Prototyping (Figma & Adobe
-                                        XD)</span>
-                                    <span class="text-pink-600 dark:text-pink-400">85%</span>
-                                </div>
-                                <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2.5">
-                                    <div class="bg-gradient-to-r from-pink-600 to-violet-600 h-2.5 rounded-full"
-                                        style="width: 85%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between font-semibold text-sm mb-2">
-                                    <span class="text-slate-700 dark:text-slate-200">Digital Marketing &
-                                        Copywriting</span>
-                                    <span class="text-pink-600 dark:text-pink-400">82%</span>
-                                </div>
-                                <div class="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2.5">
-                                    <div class="bg-gradient-to-r from-pink-600 to-violet-600 h-2.5 rounded-full"
-                                        style="width: 82%"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
-                            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Tools &
-                                Software Favorit:</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="px-3 py-1 bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium">Adobe
-                                    Photoshop</span>
-                                <span
-                                    class="px-3 py-1 bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium">Adobe
-                                    Illustrator</span>
-                                <span
-                                    class="px-3 py-1 bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium">Figma</span>
-                                <span
-                                    class="px-3 py-1 bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium">Canva
-                                    Pro</span>
-                                <span
-                                    class="px-3 py-1 bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium">Notion</span>
-                                <span
-                                    class="px-3 py-1 bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg text-xs font-medium">Premiere
-                                    Pro</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Career Timeline -->
-                <div class="mt-12">
-                    <h4 class="text-2xl font-heading font-bold text-slate-900 dark:text-white text-center mb-10">
-                        Riwayat Karir & Pengalaman Kerja
-                    </h4>
-
-                    <div class="max-w-3xl mx-auto relative border-l-2 border-pink-500/30 pl-6 sm:pl-8 space-y-8">
-                        <div class="relative group">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <a href="https://bit.ly/eksplorasi-pid-bbpmp-jatim" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="glass-card p-8 rounded-3xl border border-white/40 dark:border-slate-800 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
                             <div
-                                class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-pink-600 border-4 border-slate-50 dark:border-slate-950 group-hover:scale-125 transition-transform">
+                                class="w-14 h-14 rounded-2xl bg-pink-500/10 text-pink-600 dark:text-pink-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-compass-drafting"></i>
                             </div>
-                            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
-                                <span
-                                    class="text-xs font-bold text-pink-600 dark:text-pink-400 bg-pink-100 dark:bg-pink-900/40 px-3 py-1 rounded-full">2023
-                                    - Sekarang</span>
-                                <h5 class="text-lg font-bold text-slate-900 dark:text-white mt-3">Senior Content
-                                    Strategist & Lead Designer</h5>
-                                <p class="text-xs font-medium text-slate-500 dark:text-slate-400 mb-3">Creative Vision
-                                    Studio</p>
-                                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                                    Memimpin tim desainer dan copywriter dalam menyusun strategi komunikasi visual untuk
-                                    klien korporasi dan brand ritel.
-                                </p>
-                            </div>
+                            <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Materi Bimtek</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                                Akses modul pembelajaran, panduan teknis, dan salinan presentasi narasumber.
+                            </p>
+                            <!-- <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500"></i> Logo &
+                                Brand Asset Guidelines</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500"></i>
+                                Typography & Color Palette</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pink-500"></i> Mockup
+                                Presentation Kit</li>
+                        </ul> -->
+                            <button
+                                class="inline-flex items-center text-xs font-bold text-pink-600 dark:text-pink-400 hover:underline gap-1">
+                                Buka Link <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
                         </div>
-
-                        <div class="relative group">
+                    </a>
+                    <!-- Service 2 -->
+                    <a href="https://bit.ly/eksplorasi-pid-bbpmp-jatim" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="glass-card p-8 rounded-3xl border border-white/40 dark:border-slate-800 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
                             <div
-                                class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-pink-600 border-4 border-slate-50 dark:border-slate-950 group-hover:scale-125 transition-transform">
+                                class="w-14 h-14 rounded-2xl bg-violet-500/10 text-violet-600 dark:text-violet-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-violet-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-share-nodes"></i>
                             </div>
-                            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
-                                <span
-                                    class="text-xs font-bold text-pink-600 dark:text-pink-400 bg-pink-100 dark:bg-pink-900/40 px-3 py-1 rounded-full">2021
-                                    - 2023</span>
-                                <h5 class="text-lg font-bold text-slate-900 dark:text-white mt-3">UI/UX & Brand
-                                    Specialist</h5>
-                                <p class="text-xs font-medium text-slate-500 dark:text-slate-400 mb-3">Digital Media
-                                    Agency</p>
-                                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                                    Bertanggung jawab mendesain antarmuka aplikasi seluler serta mengelola sistem
-                                    dokumentasi brand untuk klien startup.
-                                </p>
-                            </div>
+                            <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Pengumpulan Tugas</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                                Tautan untuk mengunggah dan mengumpulkan hasil lembar kerja / RTL peserta.
+                            </p>
+                            <!-- <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-violet-500"></i>
+                                Monthly Content Calendar</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-violet-500"></i>
+                                Engagement Copywriting</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-violet-500"></i> Social
+                                Analytics Report</li>
+                        </ul> -->
+                            <button
+                                class="inline-flex items-center text-xs font-bold text-violet-600 dark:text-violet-400 hover:underline gap-1">
+                                Buka Link <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
                         </div>
-
-                        <div class="relative group">
+                    </a>
+                    <!-- Service 3 -->
+                    <a href="https://bit.ly/eksplorasi-pid-bbpmp-jatim" target="_blank" rel="noopener noreferrer">
+                        <div
+                            class="glass-card p-8 rounded-3xl border border-white/40 dark:border-slate-800 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
                             <div
-                                class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-pink-600 border-4 border-slate-50 dark:border-slate-950 group-hover:scale-125 transition-transform">
+                                class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                                <i class="fa-solid fa-mobile-screen"></i>
                             </div>
-                            <div class="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
-                                <span
-                                    class="text-xs font-bold text-pink-600 dark:text-pink-400 bg-pink-100 dark:bg-pink-900/40 px-3 py-1 rounded-full">2019
-                                    - 2021</span>
-                                <h5 class="text-lg font-bold text-slate-900 dark:text-white mt-3">Graphic Designer &
-                                    Content Creator</h5>
-                                <p class="text-xs font-medium text-slate-500 dark:text-slate-400 mb-3">Independent
-                                    Freelancer</p>
-                                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                                    Merancang materi promosi media sosial, branding Kit, serta membantu lebih dari 30+
-                                    UMKM lokal memperkuat persona produk.
-                                </p>
-                            </div>
+                            <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Dokumentasi</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                                Akses galeri foto dokumentasi dari kegiatan Bimtek.
+                            </p>
+                            <!-- <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                Wireframing & User Flows</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                Interactive Figma Prototypes</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i>
+                                Design System Components</li>
+                        </ul> -->
+                            <button
+                                class="inline-flex items-center text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline gap-1">
+                                Buka Link <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 3: LAYANAN -->
+        <!-- TAB 3: panduan 1 -->
         <section id="tab-panduan1" class="tab-content py-12 md:py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">
@@ -460,7 +360,7 @@
             </div>
         </section>
 
-        <!-- TAB 4: PORTOFOLIO -->
+        <!-- TAB 4: panduan 2 -->
         <section id="tab-panduan2" class="tab-content py-12 md:py-16">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-12">

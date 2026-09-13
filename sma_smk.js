@@ -25,45 +25,71 @@ window.AppSMA = (function () {
     ];
 
     const MOCK_DB = [
+        // {
+        //     videoId: "2w6z1dzx-bM",
+        //     title: "Tutorial Lengkap Penggunaan Papan Interaktif Digital (IFP) SMA/SMK",
+        //     channel: "Schoolpedia",
+        //     category: "Pengoperasian Dasar",
+        //     description: "Panduan menyeluruh penggunaan Papan Interaktif Digital (PID) mencakup navigasi menu dasar, papan tulis digital, koneksi jaringan, manajemen akun, hingga split screen.",
+        //     tags: ["dasar", "nyala", "menu", "whiteboard", "hdmi", "wifi", "suara", "split"],
+        //     timestamps: [
+        //         { time: "00:00", seconds: 0, title: "Prosedur Menyalakan/Mematikan & SOP Operasional", desc: "Navigasi tombol utama, manajemen daya, dan prosedur operasional dasar.", keywords: ["tombol", "nyala", "mati", "power", "sop"] },
+        //         { time: "03:18", seconds: 198, title: "Penggunaan Aplikasi Whiteboard Dasar", desc: "Dasar penggunaan kanvas, pilihan pena, warna, dan fitur eraser.", keywords: ["whiteboard", "tulis", "papan", "pen", "eraser"] },
+        //         { time: "05:18", seconds: 318, title: "Menyisipkan Media, Grafik & Bentuk Presisi", desc: "Import gambar, grafik, tabel, dan penggunaan smart shape/word.", keywords: ["foto", "gambar", "grafik", "tabel", "smart shape"] },
+        //         { time: "08:10", seconds: 490, title: "Split Whiteboard & Multi-Touch Collaboration", desc: "Membagi kanvas menjadi dua area kerja untuk interaksi dua siswa bersamaan.", keywords: ["split whiteboard", "multi-touch", "ganda", "kolaborasi"] },
+        //         { time: "09:03", seconds: 543, title: "Akses Browser & Sumber Belajar dari Whiteboard", desc: "Membuka halaman web dan materi digital langsung di dalam aplikasi papan tulis.", keywords: ["browser", "web", "internet", "sumber belajar"] },
+        //         { time: "12:54", seconds: 774, title: "Penyimpanan, QR Code & Ekspor PDF", desc: "Menyimpan file kerja ke internal/USB dan membagikan via QR Code.", keywords: ["simpan", "ekspor", "pdf", "usb", "qr code"] },
+        //         { time: "14:53", seconds: 893, title: "Smart Word: Tulisan Tangan ke Teks Otomatis", desc: "Fitur kecerdasan penulisan otomatis merapikan tulisan tangan.", keywords: ["tulisan", "teks", "smart word", "otomatis"] },
+        //         { time: "19:57", seconds: 1497, title: "Fitur Split Screen (Multi-Aplikasi)", desc: "Menampilkan dua aplikasi berbeda secara simultan di satu layar.", keywords: ["split screen", "dua aplikasi", "layar ganda"] },
+        //         { time: "24:57", seconds: 1497, title: "Screen Sharing Nirkabel & Multi-Device", desc: "Panduan mirroring layar HP/Laptop siswa dan guru ke PID.", keywords: ["screen sharing", "mirroring", "nirkabel", "multi-device"] },
+        //         { time: "38:27", seconds: 2307, title: "Pengaturan Jaringan Internet, Hotspot & Akun", desc: "Konfigurasi WiFi, Hotspot, serta manajemen akun akun pengguna PID.", keywords: ["wifi", "internet", "hotspot", "akun", "jaringan"] }
+        //     ],
+        //     isLiveAPI: false
+        // },
+        // {
+        //     videoId: "I4CT9qxIzrQ",
+        //     title: "Eksplorasi Fitur Lanjutan & Anotasi Interaktif PID",
+        //     channel: "Schoolpedia",
+        //     category: "Whiteboard & Anotasi",
+        //     description: "Panduan fitur-fitur canggih pada Whiteboard, anotasi di atas dokumen PDF/PPT, screenshot web, serta teknik kolaborasi multi-touch.",
+        //     tags: ["whiteboard", "anotasi", "screenshot", "multi-touch", "pdf"],
+        //     timestamps: [
+        //         { time: "00:00", seconds: 0, title: "Fitur Anotasi Media & Dokumen PDF/PPT", desc: "Memberi catatan di atas file media, presentasi, dan dokumen digital.", keywords: ["anotasi", "pdf", "ppt", "dokumen"] },
+        //         { time: "02:39", seconds: 159, title: "Smart Shape & Penggunaan Alat Bantu Presisi", desc: "Membuat penggaris, busur, dan gambar geometri yang rapi secara otomatis.", keywords: ["smart shape", "penggaris", "busur", "presisi"] },
+        //         { time: "04:19", seconds: 259, title: "Tangkapan Layar (Screenshot) & Impor Ke Kanvas", desc: "Mengambil gambar materi web/aplikasi lalu diimpor ke Whiteboard.", keywords: ["screenshot", "tangkapan layar", "impor"] },
+        //         { time: "08:32", seconds: 512, title: "Mode Multi-touch & Penyuntingan Real-Time", desc: "Kolaborasi multi-sentuh untuk pengerjaan tugas kelompok secara simultan.", keywords: ["multi-touch", "kolaborasi", "real-time"] }
+        //     ],
+        //     isLiveAPI: false
+        // },
+        // {
+        //     videoId: "5ywIANLgvOg",
+        //     title: "Panduan Resmi Pemanfaatan Papan Interaktif Digital (PID 2026)",
+        //     channel: "KEMDIKDASMEN",
+        //     category: "Pemanfaatan Pembelajaran",
+        //     description: "Panduan resmi tata kelola, perawatan, integrasi media interaktif, hingga penggunaan AI dalam pembelajaran dengan PID.",
+        //     tags: ["kemdikbud", "tata kelola", "perawatan", "ai", "pembelajaran"],
+        //     timestamps: [
+        //         { time: "00:00", seconds: 0, title: "Pengenalan, Keamanan & Tata Kelola PID", desc: "SOP penggunaan, pengamanan peralatan fisik/teknis, dan pemeliharaan.", keywords: ["sop", "perawatan", "pemeliharaan", "keamanan"] },
+        //         { time: "02:30", seconds: 150, title: "Pemanfaatan PID & Integrasi Konten Berbasis KA (AI)", desc: "Integrasi media interaktif, penyusunan kuis, dan pemanfaatan Kecerdasan Artifisial.", keywords: ["ai", "ka", "asesmen", "kuis", "pembelajaran"] }
+        //     ],
+        //     isLiveAPI: false
+        // }
         {
-            videoId: "2w6z1dzx-bM",
-            title: "Tutorial Lengkap Penggunaan Papan Interaktif Digital (IFP) SMA/SMK",
-            channel: "Schoolpedia",
-            category: "Pengoperasian Dasar",
-            description: "Panduan menyeluruh penggunaan Papan Interaktif Digital (PID) mencakup navigasi menu dasar, papan tulis digital, koneksi jaringan, manajemen akun, hingga split screen.",
-            tags: ["dasar", "nyala", "menu", "whiteboard", "hdmi", "wifi", "suara", "split"],
+            videoId: "MCe08odRY0o",
+            title: "Pendampingan & Instrumen Pemanfaatan PID Bagi Satuan Pendidikan SMA/SMK",
+            channel: "KEMDIKDASMEN",
+            category: "Instrumen & Pendampingan",
+            description: "Panduan instrumen pendampingan pemanfaatan Papan Interaktif Digital (PID) di satuan pendidikan sesuai standar percepatan digitalisasi pembelajaran.",
+            tags: ["instrumen", "pendampingan", "pid", "sma", "smk", "sop"],
             timestamps: [
-                { time: "00:00", seconds: 0, title: "Prosedur Menyalakan/Mematikan & SOP Operasional", desc: "Navigasi tombol utama, manajemen daya, dan prosedur operasional dasar.", keywords: ["tombol", "nyala", "mati", "power", "sop"] },
-                { time: "03:18", seconds: 198, title: "Penggunaan Aplikasi Whiteboard Dasar", desc: "Dasar penggunaan kanvas, pilihan pena, warna, dan fitur eraser.", keywords: ["whiteboard", "tulis", "papan", "pen", "eraser"] },
-                { time: "05:18", seconds: 318, title: "Menyisipkan Media, Grafik & Bentuk Presisi", desc: "Import gambar, grafik, tabel, dan penggunaan smart shape/word.", keywords: ["foto", "gambar", "grafik", "tabel", "smart shape"] },
-                { time: "08:10", seconds: 490, title: "Split Whiteboard & Multi-Touch Collaboration", desc: "Membagi kanvas menjadi dua area kerja untuk interaksi dua siswa bersamaan.", keywords: ["split whiteboard", "multi-touch", "ganda", "kolaborasi"] },
-                { time: "09:03", seconds: 543, title: "Akses Browser & Sumber Belajar dari Whiteboard", desc: "Membuka halaman web dan materi digital langsung di dalam aplikasi papan tulis.", keywords: ["browser", "web", "internet", "sumber belajar"] },
-                { time: "12:54", seconds: 774, title: "Penyimpanan, QR Code & Ekspor PDF", desc: "Menyimpan file kerja ke internal/USB dan membagikan via QR Code.", keywords: ["simpan", "ekspor", "pdf", "usb", "qr code"] },
-                { time: "14:53", seconds: 893, title: "Smart Word: Tulisan Tangan ke Teks Otomatis", desc: "Fitur kecerdasan penulisan otomatis merapikan tulisan tangan.", keywords: ["tulisan", "teks", "smart word", "otomatis"] },
-                { time: "19:57", seconds: 1497, title: "Fitur Split Screen (Multi-Aplikasi)", desc: "Menampilkan dua aplikasi berbeda secara simultan di satu layar.", keywords: ["split screen", "dua aplikasi", "layar ganda"] },
-                { time: "24:57", seconds: 1497, title: "Screen Sharing Nirkabel & Multi-Device", desc: "Panduan mirroring layar HP/Laptop siswa dan guru ke PID.", keywords: ["screen sharing", "mirroring", "nirkabel", "multi-device"] },
-                { time: "38:27", seconds: 2307, title: "Pengaturan Jaringan Internet, Hotspot & Akun", desc: "Konfigurasi WiFi, Hotspot, serta manajemen akun akun pengguna PID.", keywords: ["wifi", "internet", "hotspot", "akun", "jaringan"] }
-            ],
-            isLiveAPI: false
-        },
-        {
-            videoId: "I4CT9qxIzrQ",
-            title: "Eksplorasi Fitur Lanjutan & Anotasi Interaktif PID",
-            channel: "Schoolpedia",
-            category: "Whiteboard & Anotasi",
-            description: "Panduan fitur-fitur canggih pada Whiteboard, anotasi di atas dokumen PDF/PPT, screenshot web, serta teknik kolaborasi multi-touch.",
-            tags: ["whiteboard", "anotasi", "screenshot", "multi-touch", "pdf"],
-            timestamps: [
-                { time: "00:00", seconds: 0, title: "Fitur Anotasi Media & Dokumen PDF/PPT", desc: "Memberi catatan di atas file media, presentasi, dan dokumen digital.", keywords: ["anotasi", "pdf", "ppt", "dokumen"] },
-                { time: "02:39", seconds: 159, title: "Smart Shape & Penggunaan Alat Bantu Presisi", desc: "Membuat penggaris, busur, dan gambar geometri yang rapi secara otomatis.", keywords: ["smart shape", "penggaris", "busur", "presisi"] },
-                { time: "04:19", seconds: 259, title: "Tangkapan Layar (Screenshot) & Impor Ke Kanvas", desc: "Mengambil gambar materi web/aplikasi lalu diimpor ke Whiteboard.", keywords: ["screenshot", "tangkapan layar", "impor"] },
-                { time: "08:32", seconds: 512, title: "Mode Multi-touch & Penyuntingan Real-Time", desc: "Kolaborasi multi-sentuh untuk pengerjaan tugas kelompok secara simultan.", keywords: ["multi-touch", "kolaborasi", "real-time"] }
+                { time: "00:00", seconds: 0, title: "Pengenalan Instrumen & Kebijakan PID", desc: "Penjelasan instrumen kelayakan dan pendampingan pemanfaatan PID.", keywords: ["instrumen", "kebijakan", "pendampingan"] },
+                { time: "02:15", seconds: 135, title: "Ceklis Evaluasi & Penggunaan di Sekolah", desc: "Prosedur pengisian instrumen evaluasi pembelajaran berbasis PID.", keywords: ["ceklis", "evaluasi", "sekolah"] }
             ],
             isLiveAPI: false
         },
         {
             videoId: "5ywIANLgvOg",
-            title: "Panduan Resmi Pemanfaatan Papan Interaktif Digital (PID 2026)",
+            title: "Tutorial Resmi Penggunaan Papan Interaktif Digital (PID 2026)",
             channel: "KEMDIKDASMEN",
             category: "Pemanfaatan Pembelajaran",
             description: "Panduan resmi tata kelola, perawatan, integrasi media interaktif, hingga penggunaan AI dalam pembelajaran dengan PID.",
@@ -86,10 +112,20 @@ window.AppSMA = (function () {
             badgeColor: "bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border-slate-300 dark:border-slate-700",
             icon: "fa-shield-halved",
             items: [
-                { no: 1, name: "Perawatan & Pemeliharaan PID", desc: "Peralatan pendukung & teknis pemeliharaan perangkat PID.", videoId: "5ywIANLgvOg", ytUrl: "https://www.youtube.com/watch?v=5ywIANLgvOg" },
-                { no: 2, name: "Keamanan & SOP Operasional", desc: "Pengamanan peralatan (fisik/teknis), prosedur penyimpanan, dan form kendala.", videoId: "5ywIANLgvOg", ytUrl: "https://www.youtube.com/watch?v=5ywIANLgvOg" },
-                { no: 3, name: "Panduan Troubleshooting", desc: "Penanganan awal gangguan teknis/aplikasi PID.", videoId: "2w6z1dzx-bM", ytUrl: "https://www.youtube.com/watch?v=2w6z1dzx-bM" },
-                { no: 4, name: "Manajemen Daya & Akun", desc: "Auto power schedule (on/off otomatis) & pengaturan hak akses akun pengguna.", videoId: "2w6z1dzx-bM", ytUrl: "https://www.youtube.com/watch?v=2w6z1dzx-bM" }
+                {
+                    no: 1,
+                    name: "Perawatan & Pemeliharaan PID",
+                    desc: "Peralatan pendukung & teknis pemeliharaan perangkat PID.",
+                    videoId: "5ywIANLgvOg",
+                    ytUrl: "https://www.youtube.com/watch?v=5ywIANLgvOg"
+                },
+                {
+                    no: 2,
+                    name: "Keamanan, SOP & Instrumen Pendampingan",
+                    desc: "Pengamanan peralatan (fisik/teknis), prosedur penyimpanan, dan instrumen pendampingan satuan pendidikan.",
+                    videoId: "MCe08odRY0o",
+                    ytUrl: "https://www.youtube.com/watch?v=MCe08odRY0o"
+                }
             ]
         },
         {
